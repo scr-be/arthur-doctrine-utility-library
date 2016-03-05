@@ -11,6 +11,6 @@ php_exts   : ~
 app_prep   : dep-composer
 app_post   : ~
 app_path   : ~
-pkg_name   : arthur-doctrine-utility-library
+pkg_name   : arthur-doctrine-utils-library
 pkg_desc   : "a collections of common utilities and helpers for use throughout the other arthur-* libraries and bundles."
 pkg_bndl   : false

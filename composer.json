@@ -1,17 +1,17 @@
 {
-    "name"        : "scr-be/arthur-doctrine-common-library",
+    "name"        : "scr-be/arthur-doctrine-utils-library",
     "license"     : "MIT",
     "type"        : "library",
-    "homepage"    : "https://scr.be/arthur-doctrine-common-library",
+    "homepage"    : "https://scr.be/arthur-doctrine-utils-library",
     "description" : "This library contains a collections of common utilities and helpers for use throughout the other arthur-* libraries and bundles.",
     "support" : {
         "email"  : "rmf@scr.be",
-        "issues" : "https://arthur-doctrine-common-library.oss.scr.be/issues",
-        "source" : "https://arthur-doctrine-common-library.oss.scr.be/git",
+        "issues" : "https://arthur-doctrine-utils-library.oss.scr.be/issues",
+        "source" : "https://arthur-doctrine-utils-library.oss.scr.be/git",
         "irc"    : "irc://irc.efnet.org/scribe"
     },
     "keywords"   : [
-        "arthur-doctrine-common-library", "doctrine", "utilities", "library", "rmf", "scr.be", "scribe"
+        "arthur-doctrine-utils-library", "doctrine", "utilities", "library", "rmf", "scr.be", "scribe"
     ],
     "authors"    : [
         {
@@ -22,10 +22,10 @@
         }
     ],
     "require" : {
-        "php"                               : ">=5.6.4,~5.6|~7.0",
-        "scr-be/wonka-library"              : "~0.3",
+        "php"                               : "~5.6|~7.0",
         "scr-be/augustus-primitive-library" : "~0.3",
-        "doctrine/orm"                      : "~2.5"
+        "scr-be/wonka-library"              : "~0.3",
+        "scr-be/doctrine"
     },
     "require-dev" : {
         "phpunit/phpunit"        : "~5.0",
@@ -34,10 +34,7 @@
     },
     "autoload" : {
         "psr-4" : {
-            "Scribe\\Doctrine\\Exception\\"       : "lib/Exception/",
-            "Scribe\\Doctrine\\ORM\\Mapping\\"    : "lib/ORM/Mapping/",
-            "Scribe\\Doctrine\\ORM\\Manager\\"    : "lib/ORM/Manager/",
-            "Scribe\\Doctrine\\ORM\\Repository\\" : "lib/ORM/Repository/"
+            "Scribe\\Doctrine\\Utils\\" : "lib/",
         }
     },
     "autoload-dev" : {
@@ -52,7 +49,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master" : "0.3-dev"
+            "dev-master" : "0.1-dev"
         }
     }
 }
