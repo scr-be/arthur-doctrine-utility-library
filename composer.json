@@ -1,0 +1,58 @@
+{
+    "name"        : "scr-be/arthur-doctrine-common-library",
+    "license"     : "MIT",
+    "type"        : "library",
+    "homepage"    : "https://scr.be/arthur-doctrine-common-library",
+    "description" : "This library contains a collections of common utilities and helpers for use throughout the other arthur-* libraries and bundles.",
+    "support" : {
+        "email"  : "rmf@scr.be",
+        "issues" : "https://arthur-doctrine-common-library.oss.scr.be/issues",
+        "source" : "https://arthur-doctrine-common-library.oss.scr.be/git",
+        "irc"    : "irc://irc.efnet.org/scribe"
+    },
+    "keywords"   : [
+        "arthur-doctrine-common-library", "doctrine", "utilities", "library", "rmf", "scr.be", "scribe"
+    ],
+    "authors"    : [
+        {
+            "name"    : "Rob Frawley 2nd",
+            "email"   : "rmf@scr.be",
+            "homepage": "https://scr.be/rmf",
+            "role"    : "Project Lead"
+        }
+    ],
+    "require" : {
+        "php"                               : ">=5.6.4,~5.6|~7.0",
+        "scr-be/wonka-library"              : "~0.3",
+        "scr-be/augustus-primitive-library" : "~0.3",
+        "doctrine/orm"                      : "~2.5"
+    },
+    "require-dev" : {
+        "phpunit/phpunit"        : "~5.0",
+        "codacy/coverage"        : "~1.0",
+        "satooshi/php-coveralls" : "~1.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Scribe\\Doctrine\\Exception\\"       : "lib/Exception/",
+            "Scribe\\Doctrine\\ORM\\Mapping\\"    : "lib/ORM/Mapping/",
+            "Scribe\\Doctrine\\ORM\\Manager\\"    : "lib/ORM/Manager/",
+            "Scribe\\Doctrine\\ORM\\Repository\\" : "lib/ORM/Repository/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Scribe\\Doctrine\\Tests\\" : "tests/"
+        }
+    },
+    "minimum-stability" : "dev",
+    "prefer-stable"     : true,
+    "config": {
+        "bin-dir" : "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master" : "0.3-dev"
+        }
+    }
+}
