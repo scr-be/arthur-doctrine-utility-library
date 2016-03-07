@@ -32,7 +32,7 @@ class ExceptionTest extends WonkaTestCase
     public function testExceptions()
     {
         foreach ($this->exceptionClasses as $class) {
-            $classFQCN = self::CLASS_NAMESPACE . $class;
+            $classFQCN = self::CLASS_NAMESPACE.$class;
             $e = new $classFQCN();
 
             static::assertNotNull($e->getMessage());
