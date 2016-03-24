@@ -34,7 +34,7 @@
     "autoload" : {
         "psr-4" : {
             "Scribe\\Doctrine\\Exception\\" : "lib/Exception/",
-            "Scribe\\Doctrine\\Utils\\"      : "lib/Utils/"
+            "Scribe\\Doctrine\\Utils\\"     : "lib/Utils/"
         }
     },
     "autoload-dev" : {
