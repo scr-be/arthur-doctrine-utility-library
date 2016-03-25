@@ -1,24 +1,25 @@
 <?php
 
 /*
- * This file is part of the Scribe Mantle Bundle.
+ * This file is part of the `src-run/arthur-doctrine-utils-library` project.
  *
- * (c) Scribe Inc. <source@scribe.software>
+ * (c) Rob Frawley 2nd <rmf@src.run>
+ * (c) Scribe Inc      <scr@src.run>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-namespace Scribe\Doctrine\Exception;
+namespace SR\Doctrine\Exception;
 
-use Scribe\Wonka\Utility\UnitTest\WonkaTestCase;
+use SR\Wonka\Utility\UnitTest\WonkaTestCase;
 
 /**
  * Class ExceptionTest.
  */
 class ExceptionTest extends WonkaTestCase
 {
-    const CLASS_NAMESPACE = '\\Scribe\\Doctrine\\Exception\\';
+    const CLASS_NAMESPACE = '\\SR\\Doctrine\\Exception\\';
 
     public $exceptionClasses = [
         'ORMAssociationException',

@@ -1,29 +1,29 @@
 {
-    "name"        : "scr-be/arthur-doctrine-utils-library",
+    "name"        : "src-run/arthur-doctrine-utils-library",
     "license"     : "MIT",
     "type"        : "library",
-    "homepage"    : "https://scr.be/arthur-doctrine-utils-library",
+    "homepage"    : "https://get.src.run/arthur-doctrine-utils-library",
     "description" : "This library contains a collections of common utilities and helpers for use throughout the other arthur-* libraries and bundles.",
     "support" : {
-        "email"  : "rmf@scr.be",
-        "issues" : "https://arthur-doctrine-utils-library.oss.scr.be/issues",
-        "source" : "https://arthur-doctrine-utils-library.oss.scr.be/git",
+        "email"  : "rmf@src.run",
+        "issues" : "https://arthur-doctrine-utils-library.oss.get.src.run/issues",
+        "source" : "https://arthur-doctrine-utils-library.oss.get.src.run/git",
         "irc"    : "irc://irc.efnet.org/scribe"
     },
     "keywords"   : [
-        "arthur-doctrine-utils-library", "doctrine", "utilities", "library", "rmf", "scr.be", "scribe"
+        "arthur-doctrine-utils-library", "doctrine", "utilities", "library", "rmf", "get.src.run", "scribe"
     ],
     "authors"    : [
         {
             "name"    : "Rob Frawley 2nd",
-            "email"   : "rmf@scr.be",
-            "homepage": "https://scr.be/rmf",
+            "email"   : "rmf@src.run",
+            "homepage": "https://get.src.run/rmf",
             "role"    : "Project Lead"
         }
     ],
     "require" : {
         "php"                  : "~5.6|~7.0",
-        "scr-be/wonka-library" : "~0.5",
+        "src-run/wonka-library" : "~0.5",
         "doctrine/orm"         : "~2.5"
     },
     "require-dev" : {
@@ -33,13 +33,13 @@
     },
     "autoload" : {
         "psr-4" : {
-            "Scribe\\Doctrine\\Exception\\" : "lib/Exception/",
-            "Scribe\\Doctrine\\Utils\\"     : "lib/Utils/"
+            "SR\\Doctrine\\Exception\\" : "lib/Exception/",
+            "SR\\Doctrine\\Utils\\"     : "lib/Utils/"
         }
     },
     "autoload-dev" : {
         "psr-4" : {
-            "Scribe\\Arthur\\Doctrine\\Tests\\" : "tests/"
+            "SR\\Arthur\\Doctrine\\Tests\\" : "tests/"
         }
     },
     "minimum-stability" : "dev",
