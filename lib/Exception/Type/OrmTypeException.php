@@ -10,31 +10,21 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception;
+namespace SR\Doctrine\Exception\Type;
+
+use SR\Doctrine\Exception\OrmException;
 
 /**
- * Class ORMTransactionException.
+ * Class OrmTypeException.
  */
-class ORMTransactionException extends ORMException
+class OrmTypeException extends OrmException
 {
     /**
-     * Get the default exception message.
-     *
      * @return string
      */
     public function getDefaultMessage()
     {
-        return self::MSG_ORM_TRANSACTION;
-    }
-
-    /**
-     * Get the default exception code.
-     *
-     * @return int
-     */
-    public function getDefaultCode()
-    {
-        return self::CODE_ORM_TRANSACTION;
+        return self::MSG_ORM_TYPE;
     }
 }
 

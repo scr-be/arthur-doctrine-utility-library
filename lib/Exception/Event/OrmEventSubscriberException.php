@@ -10,27 +10,19 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception;
+namespace SR\Doctrine\Exception\Event;
 
 /**
- * Class ORMSubscriberException.
+ * Class OrmEventSubscriberException.
  */
-class ORMSubscriberException extends ORMException
+class OrmEventSubscriberException extends OrmEventException
 {
     /**
      * @return string
      */
     public function getDefaultMessage()
     {
-        return self::MSG_ORM_SUBSCRIBER_GENERIC;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDefaultCode()
-    {
-        return self::CODE_ORM_SUBSCRIBER_GENERIC;
+        return self::MSG_ORM_EVENT_SUBSCRIBER;
     }
 }
 

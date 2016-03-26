@@ -10,17 +10,20 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception;
-
-use Doctrine\ORM\ORMException;
-use SR\Wonka\Exception\ExceptionTrait;
+namespace SR\Doctrine\Exception\Action;
 
 /**
- * Class AbstractORMException.
+ * Class OrmActionRemoveException.
  */
-abstract class AbstractORMException extends ORMException implements ORMExceptionInterface
+class OrmActionRemoveException extends OrmActionException
 {
-    use ExceptionTrait;
+    /**
+     * @return string
+     */
+    public function getDefaultMessage()
+    {
+        return self::MSG_ORM_ACTION_REMOVE;
+    }
 }
 
 /* EOF */

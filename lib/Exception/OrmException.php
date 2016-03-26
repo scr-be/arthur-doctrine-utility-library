@@ -12,17 +12,19 @@
 
 namespace SR\Doctrine\Exception;
 
+use SR\Wonka\Exception\Exception;
+
 /**
- * Class ORMAssociationException.
+ * Class OrmException.
  */
-class ORMAssociationException extends ORMException
+class OrmException extends Exception implements OrmExceptionInterface
 {
     /**
      * @return string
      */
     public function getDefaultMessage()
     {
-        return self::MSG_ORM_STATE_ASSOCIATION_GENERIC;
+        return self::MSG_ORM;
     }
 
     /**
@@ -30,7 +32,7 @@ class ORMAssociationException extends ORMException
      */
     public function getDefaultCode()
     {
-        return self::CODE_ORM_STATE_ASSOCIATION_GENERIC;
+        return self::CODE_ORM;
     }
 }
 

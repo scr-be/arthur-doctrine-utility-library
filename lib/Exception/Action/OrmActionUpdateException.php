@@ -10,31 +10,19 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception;
+namespace SR\Doctrine\Exception\Action;
 
 /**
- * Class ORMException.
+ * Class OrmActionUpdateException.
  */
-class ORMException extends AbstractORMException
+class OrmActionUpdateException extends OrmActionException
 {
     /**
-     * Get the default exception message.
-     *
      * @return string
      */
     public function getDefaultMessage()
     {
-        return self::MSG_ORM_GENERIC;
-    }
-
-    /**
-     * Get the default exception code.
-     *
-     * @return int
-     */
-    public function getDefaultCode()
-    {
-        return self::CODE_ORM_GENERIC;
+        return self::MSG_ORM_ACTION_UPDATE;
     }
 }
 

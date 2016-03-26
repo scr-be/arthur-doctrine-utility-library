@@ -10,27 +10,21 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception;
+namespace SR\Doctrine\Exception\Event;
+
+use SR\Doctrine\Exception\OrmException;
 
 /**
- * Class EntityDataStateORMException.
+ * Class OrmEventException.
  */
-class ORMDataStateException extends ORMException
+class OrmEventException extends OrmException
 {
     /**
      * @return string
      */
     public function getDefaultMessage()
     {
-        return self::MSG_ORM_STATE_DATA_GENERIC;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDefaultCode()
-    {
-        return self::CODE_ORM_STATE_DATA_GENERIC;
+        return self::MSG_ORM_EVENT;
     }
 }
 
