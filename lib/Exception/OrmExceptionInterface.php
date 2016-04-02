@@ -12,7 +12,7 @@
 
 namespace SR\Doctrine\Exception;
 
-use SR\Wonka\Exception\ExceptionInterface;
+use SR\Exception\ExceptionInterface;
 
 /**
  * Interface OrmExceptionInterface.

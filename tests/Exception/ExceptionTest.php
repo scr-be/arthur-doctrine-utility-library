@@ -12,13 +12,10 @@
 
 namespace SR\Doctrine\Exception;
 
-use SR\Wonka\Exception\ExceptionInterface;
-use SR\Wonka\Utility\UnitTest\WonkaTestCase;
-
 /**
  * Class ExceptionTest.
  */
-class ExceptionTest extends WonkaTestCase
+class ExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var string

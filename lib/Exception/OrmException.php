@@ -12,7 +12,7 @@
 
 namespace SR\Doctrine\Exception;
 
-use SR\Wonka\Exception\Exception;
+use SR\Exception\Exception;
 
 /**
  * Class OrmException.
