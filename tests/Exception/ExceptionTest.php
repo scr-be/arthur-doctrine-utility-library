@@ -37,6 +37,8 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
         'State\\OrmStateException',
         'State\\OrmStateAssociationException',
         'State\\OrmStateTransactionException',
+        'Type\\OrmTypeConversionException',
+        'Type\\OrmTypeGeneratorException',
         'Type\\OrmTypeException',
     ];
 

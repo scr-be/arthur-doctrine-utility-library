@@ -35,8 +35,7 @@
     },
     "autoload" : {
         "psr-4" : {
-            "SR\\Doctrine\\Exception\\" : "lib/Exception/",
-            "SR\\Doctrine\\Utils\\"     : "lib/Utils/"
+            "SR\\Doctrine\\Exception\\" : "lib/Exception/"
         }
     },
     "autoload-dev" : {

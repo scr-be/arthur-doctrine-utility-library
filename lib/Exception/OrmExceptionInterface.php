@@ -83,6 +83,16 @@ interface OrmExceptionInterface extends ExceptionInterface
      * @var string
      */
     const MSG_ORM_TYPE = 'ORM type conversion failed.';
+
+    /**
+     * @var string
+     */
+    const MSG_ORM_TYPE_GENERATOR = 'Could not generate %s: %s';
+
+    /**
+     * @var string
+     */
+    const MSG_ORM_TYPE_CONVERSION = 'ORM field conversion failed: value: %s / type: %s.';
 }
 
 /* EOF */
