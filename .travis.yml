@@ -1,7 +1,7 @@
 ---
 
 ##
-# This file is part of the `src-run/arthur-doctrine-utils-library` project.
+# This file is part of the `src-run/arthur-doctrine-exception-library` project.
 #
 # (c) Rob Frawley 2nd <rmf@src.run>
 # (c) Scribe Inc      <scr@src.run>
@@ -10,53 +10,26 @@
 # file distributed with this source code.
 ##
 
-# Set the required project language environment and advise
-# Travis that this project fully supports the new, speedy,
-# container-built infrastructure.
-language : php
 sudo     : false
+language : php
+php      : [ 5.6, 7.0 ]
 
-# Build against the following engines: Zend 5.6.x, 7.0.x, and
-# 7-nightly, and HHVM-stable and -nightly builds.
-php :
-  - 5.6
-  - 7.0
-
-# Set a sane clone depth for Git.
-git :
+git:
   depth : 3
 
-# List of services to enable. Globally we make sure Memcached and
-# MySQL is installed and running.
-services :
-  - mysql
-  - memcached
-
-# Add custom Hostname to build environment.
-addons :
-  hosts :
-    - mainline.src.run
-
-# Define any required global enviornment variables. Specifically,
-# the package_builder variable must be set to true to enable the
-# automated package builder scripts.
 env :
   global :
-    - build_package=true
+    - secure : A+E+w/lpinxctMolo6uU5WXfb0+jyeNMiyCcxilsTkEptFUWRphqLjjWqdM/pVnga/2ADtj615iNqHObefZ+/DGTRTSa/N5pHWKuzQIs0ea/OLejtGbA0JD9/30rZF+ylBGOAGCmEkVEOFGKus40YUz39lnUczBSuBm2+GHfD0+Z2J45Dnd4uGslocI4ypgxkVH+0cP/sT4OBTWTeLFZaw5fy41pVcg7riGd4miPu8I4FX3T6JlmXTSRqvrqdRg61jEx1v1PaZfM8729f3VxIFNLx7hbO0RwH+ySMJPESXXvJiULFQGBukuf+n3eMR6tjfKq0x4BTZdLX64GHYaKTuEcdcJsVs1B/v6dc9vm3ZItnrvf7rnksL57OPkN3qBMSNWIw6sYt81aBXjsYTZng/sD2Q8BNtzbNz/EyKpDT4dp7aNpcl9tRVDADuNbE8jNN0qRYMjsrYYEQlKh80a5LQ00nHITJYdVCMLcaKnnkyjhsB4ymB2rsg/s/1pvW3KCJ5CKiykXMBzXyXAfOnr7ZMvRSWcypLdiNRUUTo7cC6pZoRqCtwgRipU67sZnRMReKEHb3HLT05ETfwLKRs1QVdEqnHSWdNCchcmnNGA9ou2rWMYAP7mRT5N7xh3oGBIf824zAWsjCV0W8n5a5F3DHRtrBn4+11OnCrHu92DNBrY=
 
-# Use builder to install system environment and application 
-# requirements.
 install :
-  - bash .run/builders/build-reqs/build-reqs.bash up-env
-  - bash .run/builders/build-reqs/build-reqs.bash up-app
+  - bash .bldr/bldr -b up-env -q
+  - bash .bldr/bldr -b up-app -q
 
-# Run unit tests!
-script : bin/phpunit -vvv
+script :
+  - bin/phpunit -vvv
 
-# Use builder to run post-operations, most importantly handle
-# statistics submissions for text coverage.
 after_script :
-  - bash .run/builders/build-reqs/build-reqs.bash dn-app
-  - bash .run/builders/build-reqs/build-reqs.bash dn-env
+  - bash .bldr/bldr -b down-app -q
+  - bash .bldr/bldr -b down-env -q
 
 ...

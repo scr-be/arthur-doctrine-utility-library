@@ -1,20 +1,20 @@
-# [src-run] arthur-doctrine-utils-library
+# [src-run] arthur-doctrine-exception-library
 
 | Continuous Integration |   Code Quality Review   |    UnitTest Coverage    |
 |:----------------------:|:-----------------------:|:-----------------------:|
-| [![Travis](https://get.src.run/arthur-doctrine-utils-library/travis_shield)](https://get.src.run/arthur-doctrine-utils-library/travis) | [![Codacy](https://get.src.run/arthur-doctrine-utils-library/codacy_shield)](https://get.src.run/arthur-doctrine-utils-library/codacy) | [![Coveralls](https://get.src.run/arthur-doctrine-utils-library/coveralls_shield)](https://get.src.run/arthur-doctrine-utils-library/coveralls) |
+| [![Travis](https://get.src.run/arthur-doctrine-exception-library/travis_shield)](https://get.src.run/arthur-doctrine-exception-library/travis) | [![Codacy](https://get.src.run/arthur-doctrine-exception-library/codacy_shield)](https://get.src.run/arthur-doctrine-exception-library/codacy) | [![Coveralls](https://get.src.run/arthur-doctrine-exception-library/coveralls_shield)](https://get.src.run/arthur-doctrine-exception-library/coveralls) |
 
 ## Overview
 
 [Welcome](https://get.src.run/go/readme_welcome)!
-The `src-run/arthur-doctrine-utils-library` package provides
+The `src-run/arthur-doctrine-exception-library` package provides
 a collections of common utilities and helpers for use throughout the other arthur-* libraries and bundles.
 
 ### Grouping
 
-This package is part of the [arthur](https://get.src.run/arthur-doctrine-utils-library/group)
-group ([explanation](https://get.src.run/arthur-doctrine-utils-library/group_explanation)),
-comprised of other releases with a concentration in 
+This package is part of the [arthur](https://get.src.run/arthur-doctrine-exception-library/group)
+group ([explanation](https://get.src.run/arthur-doctrine-exception-library/group_explanation)),
+comprised of other releases with a concentration in
 *core doctrine base classes*,
 and related functionality.
 
@@ -24,8 +24,8 @@ This package represents a single project within a
 [large collection](https://get.src.run/go/explore) of open-source code released
 under the *SR* namespace, comprised of framework-agnostic libraries,
 and a number of Symfony bundles. These projects are authored and maintained
-by [Rob Frawley 2nd](https://get.src.run/rmf) and 
-[collaborators](https://get.src.run/arthur-doctrine-utils-library/github_collaborators).
+by [Rob Frawley 2nd](https://get.src.run/rmf) and
+[collaborators](https://get.src.run/arthur-doctrine-exception-library/github_collaborators).
 
 ## Quick Start
 
@@ -37,14 +37,14 @@ your project requirements. For example, to explicitly require this project using
 the CLI, use the following command.
 
 ```bash
-$ composer require src-run/arthur-doctrine-utils-library
+$ composer require src-run/arthur-doctrine-exception-library
 ```
 
 ## Reference
 
 ### API Docs
 
-This package's API-documentation is available at [get.src.run/arthur-doctrine-utils-library/api](https://get.src.run/arthur-doctrine-utils-library/api),
+This package's API-documentation is available at [get.src.run/arthur-doctrine-exception-library/api](https://get.src.run/arthur-doctrine-exception-library/api),
 (as well as linked below via the *Reference* badge found under the *Additional Links*
 header). All API-reference is build against the *master* Git branch and updated
 automatically on each Git push---api-reference for *specific releases* will
@@ -53,7 +53,7 @@ be provided once this package has matured.
 > The entire API-reference website is auto-generated using a quick,
 > reliable, and well-developed CLI tool called [Sami](https://get.src.run/go/sami).
 > It is rigerously and regularly tested through its use in large, complex projects,
-> such as the [Symfony Full-Stack Framework](https://get.src.run/go/symfony) 
+> such as the [Symfony Full-Stack Framework](https://get.src.run/go/symfony)
 > <see: [get.src.run/go/api-ref-symfony](https://get.src.run/go/symfony-api)>, as well
 > as its use in smaller projects such
 > [Twig](https://get.src.run/go/sami-twig)
@@ -81,8 +81,8 @@ be joined using the following link
 ### Issues
 
 To report issues or request a new feature use
-[GitHub](https://get.src.run/arthur-doctrine-utils-library/github_issues)
-or [GitLab](https://get.src.run/arthur-doctrine-utils-library/gitlab_issues)
+[GitHub](https://get.src.run/arthur-doctrine-exception-library/github_issues)
+or [GitLab](https://get.src.run/arthur-doctrine-exception-library/gitlab_issues)
 to start a discussion. Include as much information as possible to aid in
 a quick resolution. Feel free to "ping" the topic if you don't get a
 response within a few days.
@@ -92,7 +92,7 @@ response within a few days.
 You created additional functionality during the use of this package? Send
 it back upstream! *Don't hesitate to submit a pull request!* Beyond the
 brief requirements outlined in the
-[contibuting guide](https://get.src.run/arthur-doctrine-utils-library/contributing),
+[contibuting guide](https://get.src.run/arthur-doctrine-exception-library/contributing),
 your [imagination](https://get.src.run/go/readme_imagination)
 represents the only limitation.
 
@@ -103,14 +103,14 @@ This project is licensed under the
 [FSF](https://get.src.run/go/fsf)-/[OSI](https://get.src.run/go/osi)-approved
 and [GPL](https://get.src.run/go/gpl)-compatible, permissive free software
 license. Review the
-[LICENSE](https://get.src.run/arthur-doctrine-utils-library/license)
+[LICENSE](https://get.src.run/arthur-doctrine-exception-library/license)
 file distributed with this source code for additional information.
 
 ## Additional Links
 
 |       Purpose | Status        |
 |--------------:|:--------------|
-| *Stable Release*    | [![Packagist](https://get.src.run/arthur-doctrine-utils-library/packagist_shield)](https://get.src.run/arthur-doctrine-utils-library/packagist) |
-| *Dev Release*    | [![Packagist](https://get.src.run/arthur-doctrine-utils-library/packagist_pre_shield)](https://get.src.run/arthur-doctrine-utils-library/packagist) |
-| *License*    | [![License](https://get.src.run/arthur-doctrine-utils-library/license_shield)](https://get.src.run/arthur-doctrine-utils-library/license) |
-| *Reference*  | [![License](https://get.src.run/arthur-doctrine-utils-library/api_shield)](https://get.src.run/arthur-doctrine-utils-library/api) |
+| *Stable Release*    | [![Packagist](https://get.src.run/arthur-doctrine-exception-library/packagist_shield)](https://get.src.run/arthur-doctrine-exception-library/packagist) |
+| *Dev Release*    | [![Packagist](https://get.src.run/arthur-doctrine-exception-library/packagist_pre_shield)](https://get.src.run/arthur-doctrine-exception-library/packagist) |
+| *License*    | [![License](https://get.src.run/arthur-doctrine-exception-library/license_shield)](https://get.src.run/arthur-doctrine-exception-library/license) |
+| *Reference*  | [![License](https://get.src.run/arthur-doctrine-exception-library/api_shield)](https://get.src.run/arthur-doctrine-exception-library/api) |

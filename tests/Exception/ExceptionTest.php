@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the `src-run/arthur-doctrine-utils-library` project.
+ * This file is part of the `src-run/arthur-doctrine-exception-library` project.
  *
  * (c) Rob Frawley 2nd <rmf@src.run>
  * (c) Scribe Inc      <scr@src.run>
@@ -45,11 +45,11 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
     public function testDoctrineExceptionMessagesAndCodes()
     {
         foreach ($this->ormExceptions as $className) {
-            $classFqcn = self::CLASS_NAMESPACE . $className;
+            $classFqcn = self::CLASS_NAMESPACE.$className;
             $constName = $this->getMessageConstantFromClassName($classFqcn);
             $exception = $this->getExceptionInstance($classFqcn);
             $normalize = function () use ($classFqcn, $constName) {
-                $value = constant($classFqcn . '::' . $constName);
+                $value = constant($classFqcn.'::'.$constName);
 
                 return preg_replace_callback('{%[0-9ds][0-9]?(?:\$[0-9]?[0-9]?[a-z]?)?}i', function (array $matches) {
                     return '<null>';
@@ -93,7 +93,7 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
         $name = str_replace('Exception', '', $name);
         $name = ltrim(preg_replace('/[A-Z]/', '_$0', $name), '_');
 
-        return strtoupper('MSG_' . $name);
+        return strtoupper('MSG_'.$name);
     }
 
     /**
