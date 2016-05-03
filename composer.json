@@ -2,7 +2,7 @@
     "name"        : "src-run/arthur-doctrine-exception-library",
     "license"     : "MIT",
     "type"        : "library",
-    "homepage"    : "https://get.src.run/arthur-doctrine-exception-library",
+    "homepage"    : "https://src.run/arthur-doctrine-exception-library",
     "description" : "This library contains a collections of common utilities and helpers for use throughout the other arthur-* libraries and bundles.",
     "support" : {
         "email"  : "rmf@src.run",
@@ -16,7 +16,7 @@
         {
             "name"    : "Rob Frawley 2nd",
             "email"   : "rmf@src.run",
-            "homepage": "https://get.src.run/rmf",
+            "homepage": "https://src.run/rmf",
             "role"    : "Project Lead"
         }
     ],
