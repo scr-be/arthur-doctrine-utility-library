@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "src-run/augustus-exception-library": "^0.7"
+        "src-run/augustus-exception-library": "~0.8"
     },
     "require-dev": {
         "codacy/coverage": "^1.0",
