@@ -59,7 +59,6 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
         $exception = $this->createExceptionInstance($qualified);
         $this->assertInstanceOf(ExceptionInterface::class, $exception);
         $this->assertRegExp('{\[ORM .+\].*}', $exception->getMessage());
-        var_dump($exception->getMessage());
 
         $exception = $this->createExceptionInstance($qualified, 'Custom message');
         $this->assertRegExp('{\[ORM .+\] Custom message}', $exception->getMessage());
