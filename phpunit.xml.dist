@@ -11,8 +11,8 @@
 >
 
     <testsuites>
-        <testsuite name="src-run/arthur-doctrine-exception-library">
-            <directory suffix="Test.php">tests</directory>
+        <testsuite name="src-run/arthur-doctrine-uuid-library">
+            <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
 
