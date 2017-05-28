@@ -13,17 +13,8 @@
 namespace SR\Doctrine\Exception\Event;
 
 /**
- * Class OrmEventListenerException.
+ * Exception thrown for event listener failures.
  */
 class OrmEventListenerException extends OrmEventException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_EVENT_LISTENER;
-    }
 }
-
-/* EOF */

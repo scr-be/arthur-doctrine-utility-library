@@ -15,17 +15,8 @@ namespace SR\Doctrine\Exception\Type;
 use SR\Doctrine\Exception\OrmException;
 
 /**
- * Class OrmTypeGeneratorException.
+ * Exception thrown for type generation failures.
  */
 class OrmTypeGeneratorException extends OrmException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_TYPE_GENERATOR;
-    }
 }
-
-/* EOF */

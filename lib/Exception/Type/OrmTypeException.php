@@ -15,17 +15,8 @@ namespace SR\Doctrine\Exception\Type;
 use SR\Doctrine\Exception\OrmException;
 
 /**
- * Class OrmTypeException.
+ * Exception thrown for generic type errors.
  */
 class OrmTypeException extends OrmException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_TYPE;
-    }
 }
-
-/* EOF */

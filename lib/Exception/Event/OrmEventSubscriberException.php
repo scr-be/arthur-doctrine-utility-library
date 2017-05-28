@@ -13,17 +13,8 @@
 namespace SR\Doctrine\Exception\Event;
 
 /**
- * Class OrmEventSubscriberException.
+ * Exception thrown for event subscriber failures.
  */
 class OrmEventSubscriberException extends OrmEventException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_EVENT_SUBSCRIBER;
-    }
 }
-
-/* EOF */

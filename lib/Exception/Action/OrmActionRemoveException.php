@@ -13,17 +13,8 @@
 namespace SR\Doctrine\Exception\Action;
 
 /**
- * Class OrmActionRemoveException.
+ * Exception thrown for remove action failures.
  */
 class OrmActionRemoveException extends OrmActionException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_ACTION_REMOVE;
-    }
 }
-
-/* EOF */

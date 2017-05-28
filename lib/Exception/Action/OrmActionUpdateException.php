@@ -13,17 +13,8 @@
 namespace SR\Doctrine\Exception\Action;
 
 /**
- * Class OrmActionUpdateException.
+ * Exception thrown for update action failures.
  */
 class OrmActionUpdateException extends OrmActionException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_ACTION_UPDATE;
-    }
 }
-
-/* EOF */

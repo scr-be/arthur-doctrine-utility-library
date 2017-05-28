@@ -13,17 +13,8 @@
 namespace SR\Doctrine\Exception\State;
 
 /**
- * Class OrmStateAssociationException.
+ * Exception thrown for invalid association states.
  */
 class OrmStateAssociationException extends OrmStateException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_STATE_ASSOCIATION;
-    }
 }
-
-/* EOF */

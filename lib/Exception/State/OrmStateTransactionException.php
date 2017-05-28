@@ -13,17 +13,8 @@
 namespace SR\Doctrine\Exception\State;
 
 /**
- * Class OrmStateTransactionException.
+ * Exception thrown for invalid transaction states.
  */
 class OrmStateTransactionException extends OrmStateException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_STATE_TRANSACTION;
-    }
 }
-
-/* EOF */

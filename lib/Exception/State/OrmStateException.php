@@ -15,17 +15,8 @@ namespace SR\Doctrine\Exception\State;
 use SR\Doctrine\Exception\OrmException;
 
 /**
- * Class OrmStateException.
+ * Exception thrown for generic invalid states.
  */
 class OrmStateException extends OrmException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_STATE;
-    }
 }
-
-/* EOF */

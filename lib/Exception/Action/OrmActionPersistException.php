@@ -13,17 +13,8 @@
 namespace SR\Doctrine\Exception\Action;
 
 /**
- * Class OrmActionPersistException.
+ * Exception thrown for persist action failures.
  */
 class OrmActionPersistException extends OrmActionException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_ACTION_PERSIST;
-    }
 }
-
-/* EOF */

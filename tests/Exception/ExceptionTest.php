@@ -10,7 +10,9 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception;
+namespace SR\Doctrine\Exception\Tests;
+
+use SR\Exception\ExceptionInterface;
 
 /**
  * Class ExceptionTest.
@@ -18,14 +20,9 @@ namespace SR\Doctrine\Exception;
 class ExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var string
-     */
-    const CLASS_NAMESPACE = '\\SR\\Doctrine\\Exception\\';
-
-    /**
      * @var string[]
      */
-    public $ormExceptions = [
+    private static $relativeExceptionClassNames = [
         'OrmException',
         'Action\\OrmActionException',
         'Action\\OrmActionPersistException',
@@ -42,71 +39,45 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
         'Type\\OrmTypeException',
     ];
 
-    public function testDoctrineExceptionMessagesAndCodes()
+    /**
+     * @return array
+     */
+    public static function provideQualifiedExceptionClassNamesData()
     {
-        foreach ($this->ormExceptions as $className) {
-            $classFqcn = self::CLASS_NAMESPACE.$className;
-            $constName = $this->getMessageConstantFromClassName($classFqcn);
-            $exception = $this->getExceptionInstance($classFqcn);
-            $normalize = function () use ($classFqcn, $constName) {
-                $value = constant($classFqcn.'::'.$constName);
-
-                return preg_replace_callback('{%[0-9ds][0-9]?(?:\$[0-9]?[0-9]?[a-z]?)?}i', function (array $matches) {
-                    return '<null>';
-                }, $value);
-            };
-
-            static::assertInstanceOf($classFqcn, $exception);
-            static::assertNotNull($exception->getMessage());
-            static::assertNotNull($exception->getCode());
-            static::assertSame($normalize(),
-                $exception->getMessage());
-
-            $exception = $this->getExceptionInstance($classFqcn, null,
-                ['PHPUnit test message for exception.', 'PHPUnit test message for exception.']);
-
-            if (strpos($className, 'TypeException')) {
-                continue;
-            }
-
-            static::assertRegExp(
-                '{.+: PHPUnit test message for exception}',
-                $exception->getMessage());
-
-            $exception = $this->getExceptionInstance($classFqcn,
-                'PHPUnit custom replacements: %s, %s',
-                ['first string', 'second string']);
-
-            static::assertSame('PHPUnit custom replacements: first string, second string',
-                $exception->getMessage());
-        }
+        return array_map(function (string $relative) {
+            return [sprintf('%s\\%s', str_replace('\\Tests', '', __NAMESPACE__), $relative)];
+        }, static::$relativeExceptionClassNames);
     }
 
     /**
-     * @param string $classFqcn
+     * @dataProvider provideQualifiedExceptionClassNamesData
      *
-     * @return string
+     * @param string $qualified
      */
-    private function getMessageConstantFromClassName($classFqcn)
+    public function testDoctrineExceptionMessagesAndCodes(string $qualified)
     {
-        $name = preg_replace('{.*\\\}', '', $classFqcn);
-        $name = str_replace('Exception', '', $name);
-        $name = ltrim(preg_replace('/[A-Z]/', '_$0', $name), '_');
+        $exception = $this->createExceptionInstance($qualified);
+        $this->assertInstanceOf(ExceptionInterface::class, $exception);
+        $this->assertRegExp('{\[ORM .+\].*}', $exception->getMessage());
+        var_dump($exception->getMessage());
 
-        return strtoupper('MSG_'.$name);
+        $exception = $this->createExceptionInstance($qualified, 'Custom message');
+        $this->assertRegExp('{\[ORM .+\] Custom message}', $exception->getMessage());
+
+        $exception = $this->createExceptionInstance($qualified, 'Message with string(%s) and integer(%s)', 'string', 1000);
+        $this->assertRegExp('{\[ORM .+\] Message with string\(string\) and integer\(1000\)}', $exception->getMessage());
     }
 
     /**
-     * @param string     $classFqcn
-     * @param array|null $parameters
+     * @param string      $qualifiedClassName
+     * @param string|null $message
+     * @param array       ...$parameters
      *
-     * @return \PHPUnit_Framework_MockObject_MockObject|ExceptionInterface
+     * @return ExceptionInterface
      */
-    private function getExceptionInstance($classFqcn, $message = null, array $parameters = null)
+    private function createExceptionInstance(string $qualifiedClassName, $message = null, ...$parameters)
     {
-        $parameters = null !== $parameters ? $parameters : [];
-
-        return $classFqcn::create($message, ...$parameters);
+        return new $qualifiedClassName($message, ...$parameters);
     }
 }
 

@@ -15,17 +15,8 @@ namespace SR\Doctrine\Exception\Event;
 use SR\Doctrine\Exception\OrmException;
 
 /**
- * Class OrmEventException.
+ * Exception thrown for generic event errors.
  */
 class OrmEventException extends OrmException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_EVENT;
-    }
 }
-
-/* EOF */

@@ -15,17 +15,8 @@ namespace SR\Doctrine\Exception\Action;
 use SR\Doctrine\Exception\OrmException;
 
 /**
- * Class OrmActionException.
+ * Exception thrown for generic action errors.
  */
 class OrmActionException extends OrmException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_ACTION;
-    }
 }
-
-/* EOF */

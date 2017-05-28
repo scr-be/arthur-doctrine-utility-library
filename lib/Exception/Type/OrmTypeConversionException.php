@@ -15,17 +15,8 @@ namespace SR\Doctrine\Exception\Type;
 use SR\Doctrine\Exception\OrmException;
 
 /**
- * Class OrmTypeConversionException.
+ * Exception thrown for type conversion failures.
  */
 class OrmTypeConversionException extends OrmException
 {
-    /**
-     * @return string
-     */
-    public function getDefaultMessage()
-    {
-        return self::MSG_ORM_TYPE_CONVERSION;
-    }
 }
-
-/* EOF */
