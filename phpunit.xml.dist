@@ -11,7 +11,7 @@
          bootstrap="./vendor/autoload.php">
 
     <testsuites>
-        <testsuite name="src-run/augustus-file-library">
+        <testsuite name="src-run/arthur-doctrine-exception-library">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
