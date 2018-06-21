@@ -26,10 +26,8 @@
         "src-run/augustus-exception-library": "~0.8.4"
     },
     "require-dev": {
-        "ext-fileinfo": "*",
         "codacy/coverage": "~1.0",
         "friendsofphp/php-cs-fixer": "~2.0",
-        "mikey179/vfsStream": "~1.6.5",
         "satooshi/php-coveralls": "~2.0",
         "symfony/finder": "~4.0",
         "symfony/phpunit-bridge": "~4.0"
