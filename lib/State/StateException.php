@@ -11,11 +11,8 @@
 
 namespace SR\Doctrine\Exception\State;
 
-use SR\Doctrine\Exception\OrmException;
+use SR\Doctrine\Exception\GeneralException;
 
-/**
- * Exception thrown for generic invalid states.
- */
-class OrmStateException extends OrmException
+class StateException extends GeneralException
 {
 }

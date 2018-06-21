@@ -11,11 +11,6 @@
 
 namespace SR\Doctrine\Exception\Action;
 
-use SR\Doctrine\Exception\OrmException;
-
-/**
- * Exception thrown for generic action errors.
- */
-class OrmActionException extends OrmException
+class ActionRemovalException extends ActionException
 {
 }

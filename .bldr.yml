@@ -12,5 +12,5 @@ app_post: ~
 env_post: composer-del,ci-coveralls,ci-codacy
 app_path: ~
 pkg_name: arthur-doctrine-exception-library
-pkg_desc: "a collections of extension for the arthur-doctrine-* packages"
+pkg_desc: "A collection of utilities and helpers for use by my other doctrine-related libraries and bundles."
 pkg_bndl: false

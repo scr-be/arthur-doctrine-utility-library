@@ -9,11 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\Action;
+namespace SR\Doctrine\Exception\Event;
 
-/**
- * Exception thrown for remove action failures.
- */
-class OrmActionRemoveException extends OrmActionException
+use SR\Doctrine\Exception\GeneralException;
+
+class EventException extends GeneralException
 {
 }

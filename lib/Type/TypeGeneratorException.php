@@ -9,11 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\Action;
+namespace SR\Doctrine\Exception\Type;
 
-/**
- * Exception thrown for persist action failures.
- */
-class OrmActionPersistException extends OrmActionException
+class TypeGeneratorException extends TypeException
 {
 }

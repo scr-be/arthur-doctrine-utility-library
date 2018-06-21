@@ -3,7 +3,7 @@
     "license": "MIT",
     "type": "library",
     "homepage": "https://src.run/arthur-doctrine-exception-library",
-    "description": "This library contains a collections of common utilities and helpers for use throughout the other arthur-* libraries and bundles.",
+    "description": "A collection of utilities and helpers for use by my other doctrine-related libraries and bundles.",
     "support": {
         "email": "rmf@src.run",
         "issues": "https://src.run/arthur-doctrine-exception-library/issues",
@@ -22,19 +22,21 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "src-run/augustus-exception-library": "~0.8"
+        "doctrine/orm": "^2.6,>=2.6.1",
+        "src-run/augustus-exception-library": "~0.8.4"
     },
     "require-dev": {
-        "codacy/coverage": "^1.0",
-        "friendsofphp/php-cs-fixer": "^1.0",
-        "phpunit/phpunit": "^5.5",
-        "satooshi/php-coveralls": "^1.0",
-        "sllh/php-cs-fixer-styleci-bridge": "^2.1",
-        "symfony/phpunit-bridge": "^3.0"
+        "ext-fileinfo": "*",
+        "codacy/coverage": "~1.0",
+        "friendsofphp/php-cs-fixer": "~2.0",
+        "mikey179/vfsStream": "~1.6.5",
+        "satooshi/php-coveralls": "~2.0",
+        "symfony/finder": "~4.0",
+        "symfony/phpunit-bridge": "~4.0"
     },
     "autoload": {
         "psr-4": {
-            "SR\\Doctrine\\Exception\\": "lib/Exception/"
+            "SR\\Doctrine\\Exception\\": "lib/"
         }
     },
     "autoload-dev": {

@@ -11,9 +11,6 @@
 
 namespace SR\Doctrine\Exception\Action;
 
-/**
- * Exception thrown for update action failures.
- */
-class OrmActionUpdateException extends OrmActionException
+class ActionUpdateException extends ActionException
 {
 }

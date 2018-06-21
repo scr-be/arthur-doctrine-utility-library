@@ -11,11 +11,11 @@
 
 namespace SR\Doctrine\Exception\Type;
 
-use SR\Doctrine\Exception\OrmException;
+use Doctrine\DBAL\Types\ConversionException;
+use SR\Doctrine\Exception\ExceptionInterface;
+use SR\Doctrine\Exception\ExceptionTrait;
 
-/**
- * Exception thrown for generic type errors.
- */
-class OrmTypeException extends OrmException
+class TypeException extends ConversionException implements ExceptionInterface
 {
+    use ExceptionTrait;
 }

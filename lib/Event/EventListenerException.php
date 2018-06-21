@@ -9,13 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\Type;
+namespace SR\Doctrine\Exception\Event;
 
-use SR\Doctrine\Exception\OrmException;
-
-/**
- * Exception thrown for type generation failures.
- */
-class OrmTypeGeneratorException extends OrmException
+class EventListenerException extends EventException
 {
 }

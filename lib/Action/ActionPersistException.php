@@ -9,11 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\Event;
+namespace SR\Doctrine\Exception\Action;
 
-/**
- * Exception thrown for event subscriber failures.
- */
-class OrmEventSubscriberException extends OrmEventException
+class ActionPersistException extends ActionException
 {
 }

@@ -10,33 +10,27 @@
 # file distributed with this source code.
 ##
 
-sudo: false
-language: php
-php:
-  - 7.1
-  - nightly
+sudo     : false
+language : php
+php      : [ 7.1, 7.2, nightly ]
 
 matrix:
   fast_finish: true
   allow_failures:
     - php: nightly
 
-cache:
-  directories:
-    - $HOME/.composer/cache/files
-
 git:
   depth : 3
 
 env :
   global :
-    - secure: "kcphiPHOAFJpVvBT6fQ1KY8uwqxnifVSWMJerBHWruABJ7th1FTSPk7ltwUEXBLtjbe4o9+1q+Wm2WFmgwQgRjGR4SE4Ao+6v0DeuR+T/o2/sLgbo78d7MH/i2wUekbwv4ZzbgtWjYXqPnXX7LHkb07f4/eIi38t/WlHvWKFwXwAPWE8s1eAFqvKZDdafHcwn2lbyHLyF8SrZGd7EaB4yCzw4M25GxKgAMlxgIXJDiao59TiqkruaUlxOYI1n2IJCaTS42EVkRpzt+98NYwBggERMhVa8nQrq61jzXwLTcpEc+3MdZMFbJd5QHpx/L/r2dXlGD3eQTYNoNmr0OcsGKEKLVchuXxs9jlPenQmZbVuy4noncsGpLUsK7YXh2xDnqWYz26rReVJCes4dCMioENc7AN446d63GxmiFh4gFtg2IqZfK/Yh8WztZ0yHst9exCv8QAiLGC/W2+IQDZiZCD3P2IWRs6XI/HgtEXcKPzxSZjNCiAv75oTzOn5NE0+xswZttRHQ3u4FPnD7tYJa5cMnXoiQtpi1lv9ol0m9Dlne4um5GHZKHk1iIXSwWqsgwwEo0avkCh4Ih2iulW9X0BmXZRnr+orgJY0wjxiDtcqNLHqARuJpxmcSgUnb2aatqlj4NrHg+qBnhEq68Agyb5NjCT+frgfFLIOCMUkpBY="
+    - secure: "gi0z/w7iaqtz0iNlVuVPDGQryZVkbQ/vltSa6aPbVumq7UJtdpGIbUYTVNvtjE4HXVYPvfLRfPTByGfsXoQ6WzROVXNhi85Hp2sIeQOAuJnwr2/1tjeCdgSVU0hEHDLQ8rs7Fo/SphnzxvyCIwoLDgUTiZdX+uaO0cGH2dRrRUKWVY3kEMrpD3mIKaWlKkBNsRDeBKKMRMu9wkhqGMzMVhnD/1hAj4AB8Npvi33RwKci+cYdGWw7YqjtneCzVsI/qW2v82DWgc3n6uOFZtcMW+LeUM+xOgwJ7b5R78zirm2vLFk5UOQHqM5hzxsneIWG1OsDiVAds9tyBIYlEKIR6qQTOnrqbkUzZMMJ33f7IJYyYgMPxZPZjdTqfMWTA91jYEf3Th/Mo6QeXgwIOnSgZOgQjbIH+Yz5xZDIJrMm1N7ncKH0h+RDDDoil3VuRHzHpxOOUDTy8P5qfny5FWP3fYNvcKcvPFbAjN8k+rcKY4uhVzNltDnmP/JX2HkD3B/FCchmVdtcIG//U84MbeOJbteEPsU8s+FpsEfv6t/Cv3hdVucPwdifaRm29//zzvVijdwQ99zWo/epvKl4Fpq+mfbmeMKT6sOoqW6hgbyZoyGn2bzEvwaaNSySY1MXLVrpvV3CTIlrFhf4vT7k6/4w+EomemfWOxLeswFXE+AxBAc="
 
 install :
   - bash .bldr/bldr -b up
 
 script :
-  - bin/simple-phpunit | bin/phpunit -vvv
+  - bin/simple-phpunit || bin/phpunit
 
 after_script :
   - bash .bldr/bldr -b down

@@ -9,13 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\Type;
+namespace SR\Doctrine\Exception;
 
-use SR\Doctrine\Exception\OrmException;
+use Doctrine\ORM\ORMInvalidArgumentException;
 
-/**
- * Exception thrown for type conversion failures.
- */
-class OrmTypeConversionException extends OrmException
+class InvalidArgumentException extends ORMInvalidArgumentException implements ExceptionInterface
 {
+    use ExceptionTrait;
 }

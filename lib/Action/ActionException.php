@@ -9,13 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\Event;
+namespace SR\Doctrine\Exception\Action;
 
-use SR\Doctrine\Exception\OrmException;
+use SR\Doctrine\Exception\GeneralException;
 
-/**
- * Exception thrown for generic event errors.
- */
-class OrmEventException extends OrmException
+class ActionException extends GeneralException
 {
 }

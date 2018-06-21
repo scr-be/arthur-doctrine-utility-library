@@ -9,11 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\State;
+namespace SR\Doctrine\Exception\Type;
 
-/**
- * Exception thrown for invalid association states.
- */
-class OrmStateAssociationException extends OrmStateException
+class TypeConversionException extends TypeException
 {
 }

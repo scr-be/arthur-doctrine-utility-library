@@ -9,11 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\Event;
+namespace SR\Doctrine\Exception\State;
 
-/**
- * Exception thrown for event listener failures.
- */
-class OrmEventListenerException extends OrmEventException
+class StateTransactionException extends StateException
 {
 }

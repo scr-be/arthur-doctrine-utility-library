@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace SR\Doctrine\Exception\State;
+namespace SR\Doctrine\Exception;
 
-/**
- * Exception thrown for invalid transaction states.
- */
-class OrmStateTransactionException extends OrmStateException
+use Doctrine\ORM\ORMException;
+
+class GeneralException extends ORMException implements ExceptionInterface
 {
+    use ExceptionTrait;
 }
